@@ -94,12 +94,12 @@ Before running the application in Visual Studio, ensure that the output program 
 
 
 ##### Default admin login details
-email = your email in appsettings.json
-password = a3<$'5/<Ll3u
+1. email = your email in appsettings.json
+2. password = a3<$'5/<Ll3u
 
 ##### Default customer dummy login details
-email = notexistantemail@example.com
-password = erA(n.54_v64
+1. email = notexistantemail@example.com
+2. password = erA(n.54_v64
 
 
 ## ✍️ Contributors

@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F820FA2-8B54-4E39-BDC3-AC9CF98201A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SalonAppointmentSystem</RootNamespace>
+    <AssemblyName>SalonAppointmentSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MigraDoc.DocumentObjectModel-WPF, Version=1.31.3066.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\MigraDoc.DocumentObjectModel-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering-WPF, Version=1.31.3066.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\MigraDoc.Rendering-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-WPF, Version=1.31.1789.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\PdfSharp-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting-WPF, Version=1.31.1789.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\WPF\PdfSharp.Charting-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Designer">
+      <HintPath>lib\SQLite.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>lib\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>lib\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboardForm.Designer.cs">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogInForm.Designer.cs">
+      <DependentUpon>AdminLogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.cs" />
+    <Compile Include="BookForHair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookForHair.Designer.cs">
+      <DependentUpon>BookForHair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookForNails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookForNails.Designer.cs">
+      <DependentUpon>BookForNails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientDashboardForm.Designer.cs">
+      <DependentUpon>ClientDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseManager.cs" />
+    <Compile Include="EmailHelper.cs" />
+    <Compile Include="FormManager.cs" />
+    <Compile Include="GenderAndHairtypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenderAndHairtypeForm.Designer.cs">
+      <DependentUpon>GenderAndHairtypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateReportsForm.Designer.cs">
+      <DependentUpon>GenerateReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuestLogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuestLogInForm.Designer.cs">
+      <DependentUpon>GuestLogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HairAppointmentTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HairAppointmentTime.Designer.cs">
+      <DependentUpon>HairAppointmentTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NailAppointmentTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NailAppointmentTime.Designer.cs">
+      <DependentUpon>NailAppointmentTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDFHelper.cs" />
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThankYouForm.Designer.cs">
+      <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateClass.cs" />
+    <Compile Include="ViewBookingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBookingsForm.Designer.cs">
+      <DependentUpon>ViewBookingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogInForm.resx">
+      <DependentUpon>AdminLogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookForHair.resx">
+      <DependentUpon>BookForHair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookForNails.resx">
+      <DependentUpon>BookForNails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientDashboardForm.resx">
+      <DependentUpon>ClientDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenderAndHairtypeForm.resx">
+      <DependentUpon>GenderAndHairtypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReportsForm.resx">
+      <DependentUpon>GenerateReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuestLogInForm.resx">
+      <DependentUpon>GuestLogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HairAppointmentTime.resx">
+      <DependentUpon>HairAppointmentTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NailAppointmentTime.resx">
+      <DependentUpon>NailAppointmentTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThankYouForm.resx">
+      <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBookingsForm.resx">
+      <DependentUpon>ViewBookingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SmtpConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-1970468_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1a type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1b Type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1C Type Hair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2A Type Hair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2B Type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2C Type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3A Type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3b-hair-type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3C-Hair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4A Type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4B hair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4C type.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1a me.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1b men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1c men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2b men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3a men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3B men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3c men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4a men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4b men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4C men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotor-ai-2025032916138.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotor-ai-20250329161252.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotor-ai-20250329161729.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotor-ai-20250329161738.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Mar 30, 2025, 07_22_08 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Mar 30, 2025, 07_23_18 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Mar 30, 2025, 07_44_33 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Mar 30, 2025, 07_44_36 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CornRows.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fulani Braids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goddess Box Braids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FulaniBreads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layered Cut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layered Cut1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layered Haircuts That Add Movement and Style to Your Look.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuzzCut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FadeCut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnderCut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdsNest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stiletto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coffin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Square.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soft Nails.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ig_ ednnamaartinss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0pagebg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0thankyou.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0welcome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0menustripbg.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties appsettings_1json__JsonSchema="https://appsemble.app/api.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

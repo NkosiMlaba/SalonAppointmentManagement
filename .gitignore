@@ -1,0 +1,11 @@
+appsettings.json
+SalonDatabase.sqlite
+Form1Other.cs
+.vs
+bin
+obj
+*.user
+*.suo
+*.vsp
+*.log
+*.cache

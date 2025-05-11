@@ -24,7 +24,7 @@ namespace SalonAppointmentSystem
 
         public override string ToString()
         {
-            return $"Admin: {Name} {Surname} ({Email})";
+            return $"{Name} {Surname}" + Environment.NewLine + $"({Email})";
         }
     }
 }

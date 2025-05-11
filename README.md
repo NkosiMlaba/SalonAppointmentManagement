@@ -1,6 +1,6 @@
 # 💇‍♀️ Salon Appointment Booking System
 
-A desktop-based Salon Appointment System built using C# and Windows Forms. This system allows customers to book appointments, view bookings and generate reports. It also enables salon staff to view bookings and view generate reports.
+A desktop-based Salon Appointment System built using C# and Windows Forms. This system allows customers to book appointments, view bookings and generate reports. It also enables salon staff to view bookings and generate reports.
 
 
 ## 📌 Features
@@ -11,12 +11,12 @@ A desktop-based Salon Appointment System built using C# and Windows Forms. This 
 - View appointment bookings
 - Generate personal appointment summary PDF
 - Generate booking invoice PDF
-- Receive booking confirmation via email
+- Receive booking and invoices via email
 
 #### ✅ Admin/Salon Side
 - View daily appointment schedule
 - Generate financial reports (income, services breakdown, etc.)
-- Generate all-appointments summary PDF
+- Email daily appointments and financial reports
 
 #### ✅ Reports
 PDF reports generated using PDFsharp including:

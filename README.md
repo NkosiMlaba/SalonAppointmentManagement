@@ -106,6 +106,6 @@ Before running the application in Visual Studio, ensure that the output program 
 
 - Nkosikhona Mlaba
 - Andisiwe Cele
-- Shriya Deosan
+- Shriya Deosaran
 - Owethu Dlamini
 - Sanelisiwe Mvula
